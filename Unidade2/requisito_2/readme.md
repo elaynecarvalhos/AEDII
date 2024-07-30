@@ -20,5 +20,33 @@ Para cada ODS, foi montado uma rede onde:
 
 **Grafo da Rede e Grau dos Nós vs Grau Médio dos Vizinhos**
 
-<img src="[Unidade2/requisito_2/results/grafo_4.png](https://drive.google.com/file/d/1oNgwUKwx69p2IdnG36MoZRdSt8EwQMlb/view?usp=sharing)">
-<img src="Unidade2/requisito_2/results/grafico_4.png">
+Imagens na pasta results dentro da pasta requisito_2
+
+Explicação: A rede do ODS 04 exibe uma alta concentração de pontos na parte inferior esquerda, indicando que muitos autores tendem a colaborar predominantemente dentro de pequenos grupos ou com um número limitado de outros autores.
+
+<h3>ODS 07: Energia Acessível e Limpa</h3>
+
+**Grafo da Rede e Grau dos Nós vs Grau Médio dos Vizinhos**
+
+Imagens na pasta results dentro da pasta requisito_2
+
+Explicação: A linha de tendência ascendente indica uma correlação positiva, sugerindo que pesquisadores com um maior número de colaborações tendem a ter vizinhos com um número igualmente alto de colaborações. Além disso, muitos nós de grau baixo possuem vizinhos de grau alto, o que pode indicar que pesquisadores menos influentes (com poucos artigos) se associam a pesquisadores mais renomados.
+
+<h3>ODS 12: Consumo e Produção Responsáveis</h3>
+
+**Grafo da Rede e Grau dos Nós vs Grau Médio dos Vizinhos**
+
+Imagens na pasta results dentro da pasta requisito_2
+
+Explicação: Ainda há uma grande concentração de autores com poucas publicações; no entanto, agora também observamos alguns autores que, apesar de terem poucos artigos, estão associados a grupos de autores com muitas publicações em colaboração com outras universidades.
+
+<h3>ODS 15: Vida Terrestre</h3>
+
+**Grafo da Rede e Grau dos Nós vs Grau Médio dos Vizinhos**
+
+Imagens na pasta results dentro da pasta requisito_2
+
+Explicação: O gráfico da ODS 15 mostra uma tendência ascendente, mas destaca uma grande quantidade de nós de baixo grau conectados a vizinhos de alto grau. Isso indica o mesmo fenômeno observado na ODS 7, onde pesquisadores menos prolíficos publicam artigos em colaboração com pesquisadores mais estabelecidos.
+
+
+
