@@ -12,17 +12,17 @@ de algum Objetivo de Desenvolvimento Sustentável da ONU (ODS).
 + ODS 12 - Vida Terrestre;
 + ODS 15 - Parcerias e Meios de Implementação.
 
-Para cada uma das ODS's, construiu-se um grafo, onde cada vértice representa um autor da instituição. Considera-se coautoria quando dois ou mais autores publicam artigos juntos. 
-Ou seja, um vértice entre dois nós do grafo ocorre quando pesquisadores publicam um trabalho em conjunto.
+Para cada uma das ODS, foi construído um grafo, onde cada vértice representa um autor da instituição. A coautoria é considerada quando dois ou mais autores publicam artigos juntos. Assim, uma aresta entre dois nós no grafo ocorre quando pesquisadores colaboram em um trabalho.
 
-Ademais, para a construção do grafo, considerou-se interconexões simples, sem a utilização de pesos. Ou seja, caso dois ou mais autories publiquem mais de um trabalho juntos, 
-ainda assim estes terão apenas um vértice os conectando, uma vez que o objetivo é apenas mapear conexões entre os autores.
+Além disso, na construção do grafo, consideraram-se interconexões simples, sem a aplicação de pesos. Ou seja, mesmo que dois ou mais autores publiquem vários trabalhos juntos, haverá apenas uma aresta os conectando, pois o objetivo é mapear as conexões entre os autores.
 
-Por fim, para análise de resultados, foi montado, para cada ODS, um gráfico bipartido sobre a assortatividade em relação ao grau dos nós da rede, conforme pode ser visualizado na pasta requisito_02. 
-Outrossim, também construiu-se uma tabela para cada uma das ODS's, destacando fatores fundamentais de análise, sendo este: Número de vértices, número de arestas, coeficiente de assortatividade de grau, 
-número de componentes conectados, tamanho do componente gigante e coeficiente médio de aglomeração, conforme pode ser visto na pasta requisito_03.
+Para a análise dos resultados, foi gerado um gráfico bipartido para cada ODS, avaliando a assortatividade em relação ao grau dos nós da rede, conforme pode ser visualizado na pasta requisito_02. Também foi criada uma tabela para cada ODS, destacando fatores fundamentais de análise, incluindo: número de vértices, número de arestas, coeficiente de assortatividade de grau, número de componentes conectados, tamanho do componente gigante e coeficiente médio de aglomeração, conforme disponível na pasta requisito_03.
 
-No geral, os pesquisadores da UFRN mostram uma boa conectividade global em áreas com um número maior de pesquisadores e colaborações, indicando uma rede bem estabelecida de coautoria. Há uma tendência significativa 
-de formação de clusters colaborativos, sugerindo que os pesquisadores trabalham frequentemente dentro de grupos bem definidos. A assortatividade de grau varia entre as redes, com algumas áreas mostrando uma forte 
-tendência para colaborações entre pesquisadores com graus semelhantes, enquanto outras são mais variadas. A fragmentação é mais pronunciada em redes menores, mas ainda existe uma conectividade substancial dentro dos 
-maiores componentes dessas redes.
+No geral, os pesquisadores da UFRN demonstram uma boa conectividade global em áreas com um maior número de pesquisadores e colaborações, indicando uma rede de coautoria bem estabelecida. Há uma tendência significativa de formação de clusters colaborativos, sugerindo que os pesquisadores frequentemente trabalham dentro de grupos bem definidos. A assortatividade de grau varia entre as redes, com algumas áreas mostrando uma forte tendência de colaborações entre pesquisadores com graus semelhantes, enquanto outras são mais diversificadas. A fragmentação é mais pronunciada em redes menores, mas ainda existe uma conectividade substancial dentro dos maiores componentes dessas redes.
+
+<h2>Explicação em vídeo</h2>
+
+Link do vídeo: 
+
+<h2>Discente</h2>
+Maria Elayne Carvalho de Souza
