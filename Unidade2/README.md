@@ -22,7 +22,7 @@ No geral, os pesquisadores da UFRN demonstram uma boa conectividade global em á
 
 <h2>Explicação em vídeo</h2>
 
-Link do vídeo: 
++ Link do vídeo: https://www.loom.com/share/ad00b0021bb64da1a7e21967ad583e01?sid=3827a0bd-bf98-435c-99fc-72ef7f81d17d
 
 <h2>Discente</h2>
 Maria Elayne Carvalho de Souza
