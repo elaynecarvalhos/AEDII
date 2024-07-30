@@ -20,5 +20,5 @@ Para cada ODS, foi montado uma rede onde:
 
 **Grafo da Rede e Grau dos Nós vs Grau Médio dos Vizinhos
 
-<img src="/assets/results/grafo_4">
-<img src="/assets/results/grafico_4">
+<img src="/assets/results/grafo_4.png">
+<img src="/assets/results/grafico_4.png">
