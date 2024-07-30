@@ -16,8 +16,9 @@ Para cada ODS, foi montado uma rede onde:
   
 <h2>Visualizações e Interpretações</h2>
 
-<h3>ODS 04: Educação de Qualidade</h3>h3>
+<h3>ODS 04: Educação de Qualidade</h3>
 
 **Grafo da Rede e Grau dos Nós vs Grau Médio dos Vizinhos
+
 <img src="/assets/results/grafo_4">
 <img src="/assets/results/grafico_4">
