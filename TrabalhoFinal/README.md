@@ -1,8 +1,8 @@
-#Análise de páginas da Wikipédia
-##Introdução
+# Análise de páginas da Wikipédia
+## Introdução
 Este projeto é um componente da disciplina Algoritmo e Estrutura de Dados 2 oferecida na Universidade Federal do Rio Grande do Norte. O principal objetivo deste esforço é criar uma rede direcionada (gráfico) usando links de páginas da Wikipédia e realizar uma análise abrangente usando conceitos de rede. O processo de geração da rede começa com uma página específica da Wikipédia e é limitado a um nível de profundidade 2. A seleção dos teoremas da incompletude de Gödel foi feita como base para a geração da rede.
 
-##Pipeline de dados
+## Pipeline de dados
 O pipeline de dados compreende quatro tarefas essenciais. O nó inicial é responsável por buscar dados de uma semente especificada e construir o gráfico. O nó subsequente elimina quaisquer nós duplicados, enquanto o terceiro nó filtra os nós com um grau menor que 2. Finalmente, o último nó combina cálculos e gera gráficos para várias métricas de rede, incluindo centralidade de grau, centralidade de proximidade, centralidade de intermediação e centralidade de autovetor. .
 
 Execute o caderno
@@ -12,24 +12,24 @@ pipeline.run("Página da Wikipédia")
 
 Link do Vídeo: 
 
-##Limpeza de dados
+## Limpeza de dados
 A versão inicial do grafo direcionado gerado a partir dos "Teoremas da Incompletude de Godel" consistia em 24.342 nós e 119.354 arestas. Após a remoção das duplicatas, o gráfico foi refinado para 24.090 nós e 119.049 arestas. Finalmente, ao filtrar todos os nós com grau um, o gráfico resultante foi reduzido para 5.447 nós e 97.550 arestas.
 ## Network Metrics
 
-##Métricas de rede
+## Métricas de rede
 Centralidade de Grau
 Mede o número de conexões (arestas) que um nó possui em uma rede, em relação ao número total de conexões possíveis. Representa a importância ou influência de um nó com base na proporção de conexões diretas que possui em comparação com todas as conexões possíveis na rede. Os nós com maior grau de centralidade são frequentemente considerados mais centrais ou influentes na rede.
 
 Os 10 principais nós com maior centralidade de grau:
 <center><img width="800" src="figures/degree_centrality.png"></center>
 
-###Centralidade de proximidade
+### Centralidade de proximidade
 Quantifica o quão próximo um nó está de todos os outros nós de uma rede. Ele mede o comprimento médio do caminho mais curto de um nó para todos os outros nós. Nós com alta centralidade de proximidade são normalmente capazes de alcançar outros nós de forma rápida e eficiente, agindo como intermediários de informações ou pontes na rede.
 
 Abaixo estão os 10 principais nós que exibem um grau de centralidade mais alto:
 <center><img width="800" src="figures/closeness_centrality.png"></center>
 
-###Centralidade de intermediação
+### Centralidade de intermediação
 Identifica nós que atuam como intermediários ou pontes entre outros nós em uma rede. Ele quantifica com que frequência um nó se encontra nos caminhos mais curtos entre pares de nós. Os nós com alta centralidade de intermediação têm controle significativo sobre o fluxo de informações e podem facilitar a comunicação entre partes distintas da rede.
 
 Abaixo estão os 10 principais nós que exibem uma centralidade de intermediação mais alta:
