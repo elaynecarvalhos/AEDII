@@ -10,7 +10,7 @@ Para replicar os resultados apresentados, basta executar o caderno e modificar o
 
 pipeline.run("Página da Wikipédia")
 
-Link do Vídeo: 
+Link do Vídeo: https://www.loom.com/share/ea8fd784a77b4b699ed167c17e8822fb
 
 ## Limpeza de dados
 A versão inicial do grafo direcionado gerado a partir dos "Teoremas da Incompletude de Godel" consistia em 24.342 nós e 119.354 arestas. Após a remoção das duplicatas, o gráfico foi refinado para 24.090 nós e 119.049 arestas. Finalmente, ao filtrar todos os nós com grau um, o gráfico resultante foi reduzido para 5.447 nós e 97.550 arestas.
