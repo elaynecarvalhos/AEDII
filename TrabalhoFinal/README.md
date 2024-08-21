@@ -83,7 +83,7 @@ Utilizando o software Gephi, foi gerada uma visualização aprimorada de toda a 
 
 Nós com um grau de entrada superior a 250 são identificados exibindo seus nomes, enquanto o tamanho de cada nó é dimensionado proporcionalmente ao seu grau de entrada.
 
-<center><img width="800" src="figures/gephi_graph.svg"></center>
+<center><img width="800" src="figures/gephi_graph.png"></center>
 
 ---- 
 
