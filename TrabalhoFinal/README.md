@@ -106,7 +106,7 @@ Ao examinar o gráfico, torna-se aparente que há um aglomerado notável de nós
 
 #### Graph with in-degree > 80
 
-<center><img width="800" src="figures/gephi_graph_80_in.svg"></center>
+<center><img width="800" src="figures/gephi_graph_80_in.png"></center>
 
 ### K-core
 
