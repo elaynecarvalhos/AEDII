@@ -117,3 +117,4 @@ ambém é possível usar o gephi para plotar o núcleo 343:
 
 <center><img width="800" src="figures/gephisto.png"></center>
 
+### Discente: Maria Elayne Carvalho de Souza
