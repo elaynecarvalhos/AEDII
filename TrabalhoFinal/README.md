@@ -1,105 +1,95 @@
-# Wikipedia pages analysis
+#Análise de páginas da Wikipédia
+##Introdução
+Este projeto é um componente da disciplina Algoritmo e Estrutura de Dados 2 oferecida na Universidade Federal do Rio Grande do Norte. O principal objetivo deste esforço é criar uma rede direcionada (gráfico) usando links de páginas da Wikipédia e realizar uma análise abrangente usando conceitos de rede. O processo de geração da rede começa com uma página específica da Wikipédia e é limitado a um nível de profundidade 2. A seleção dos teoremas da incompletude de Gödel foi feita como base para a geração da rede.
 
-## Introduction 
+##Pipeline de dados
+O pipeline de dados compreende quatro tarefas essenciais. O nó inicial é responsável por buscar dados de uma semente especificada e construir o gráfico. O nó subsequente elimina quaisquer nós duplicados, enquanto o terceiro nó filtra os nós com um grau menor que 2. Finalmente, o último nó combina cálculos e gera gráficos para várias métricas de rede, incluindo centralidade de grau, centralidade de proximidade, centralidade de intermediação e centralidade de autovetor. .
 
-This project is a component of the Algorithm and Data Structure 2 course offered at the Federal University of Rio Grande do Norte. The main goal of this endeavor is to create a directed network (graph) using links from Wikipedia pages and conduct a comprehensive analysis using network concepts. The process of generating the network begins with a specific Wikipedia page and is limited to a depth level of 2. The selection of Gödel's incompleteness theorems  was made as the basis for generating the network.
+Execute o caderno
+Para replicar os resultados apresentados, basta executar o caderno e modificar o título da página para o desejado.
 
-## Data Pipeline
-The data pipeline comprises four essential tasks. The initial node is responsible for fetching data from a specified seed and building the graph. The subsequent node eliminates any duplicate nodes, while the third node filters out nodes with a degree less than 2. Finally, the last node combines computations and generates plots for various network metrics, including degree centrality, closeness centrality, betweenness centrality, and eigenvector centrality.
+pipeline.run("Página da Wikipédia")
 
-<center><img width="800" src="figures/pipeline.svg"></center>
+Link do Vídeo: 
 
-## Run the notebook
-To replicate the presented results, simply execute the notebook and modify the page title to the desired one.
-```
-pipeline.run("Wikipedia Page")
-
-```
-## Loom video
-- Parte I (Unidade II) - [:camera: video](https://www.loom.com/share/11f668624d8c41ab9542e609c54b01c3?sid=4965e1e5-29ba-4a09-a2a6-8b6b7afc7ece)
-- Parte II (Unidade III) - [:camera: video](https://www.loom.com/share/5227fed92e034827ad6b575cd5edd47d?sid=31c0c75f-57a2-4173-9660-54a62952572d)
-
-## Data Cleaning
-
-The initial version of the directed graph generated from the "Godel Incompleteness Theorems" consisted of 24,342 nodes and 119,354 edges. After removing duplicates, the graph was refined to 24,090 nodes and 119,049 edges. Finally, by filtering out all nodes with a degree of one, the resulting graph was reduced to 5,447 nodes and 97,550 edges.
-
+##Limpeza de dados
+A versão inicial do grafo direcionado gerado a partir dos "Teoremas da Incompletude de Godel" consistia em 24.342 nós e 119.354 arestas. Após a remoção das duplicatas, o gráfico foi refinado para 24.090 nós e 119.049 arestas. Finalmente, ao filtrar todos os nós com grau um, o gráfico resultante foi reduzido para 5.447 nós e 97.550 arestas.
 ## Network Metrics
 
-### Degree Centrality
-Measures the number of connections (edges) that a node has in a network, relative to the total number of possible connections. It represents the importance or influence of a node based on the proportion of direct connections it has compared to all possible connections in the network. Nodes with higher degree centrality are often considered more central or influential in the network.
+##Métricas de rede
+Centralidade de Grau
+Mede o número de conexões (arestas) que um nó possui em uma rede, em relação ao número total de conexões possíveis. Representa a importância ou influência de um nó com base na proporção de conexões diretas que possui em comparação com todas as conexões possíveis na rede. Os nós com maior grau de centralidade são frequentemente considerados mais centrais ou influentes na rede.
 
-Top 10 nodes with higher degree centrality:
+Os 10 principais nós com maior centralidade de grau:
 <center><img width="800" src="figures/degree_centrality.png"></center>
 
-### Closeness Centrality
-Quantifies how close a node is to all other nodes in a network. It measures the average shortest path length from a node to all other nodes. Nodes with high closeness centrality are typically able to reach other nodes quickly and efficiently, acting as information brokers or bridges in the network.
+###Centralidade de proximidade
+Quantifica o quão próximo um nó está de todos os outros nós de uma rede. Ele mede o comprimento médio do caminho mais curto de um nó para todos os outros nós. Nós com alta centralidade de proximidade são normalmente capazes de alcançar outros nós de forma rápida e eficiente, agindo como intermediários de informações ou pontes na rede.
 
-Below are the top 10 nodes that exhibit a higher degree centrality:
+Abaixo estão os 10 principais nós que exibem um grau de centralidade mais alto:
 <center><img width="800" src="figures/closeness_centrality.png"></center>
 
-### Betweenness Centrality
-Identifies nodes that act as intermediaries or bridges between other nodes in a network. It quantifies how often a node lies on the shortest paths between pairs of nodes. Nodes with high betweenness centrality have significant control over information flow and can facilitate communication between disparate parts of the network.
+###Centralidade de intermediação
+Identifica nós que atuam como intermediários ou pontes entre outros nós em uma rede. Ele quantifica com que frequência um nó se encontra nos caminhos mais curtos entre pares de nós. Os nós com alta centralidade de intermediação têm controle significativo sobre o fluxo de informações e podem facilitar a comunicação entre partes distintas da rede.
 
-Below are the top 10 nodes that exhibit a higher betweenness centrality:
+Abaixo estão os 10 principais nós que exibem uma centralidade de intermediação mais alta:
 <center><img width="800" src="figures/betweenness_centrality.png"></center>
 
 
-### Eigenvector Centrality
-Assigns a measure of importance to nodes based on both their direct connections and the importance of those connections. It takes into account the centrality of a node's neighbors, assigning higher scores to nodes connected to other highly central nodes. Nodes with high eigenvector centrality are influential due to their connections to other influential nodes.
+### Centralidade do autovetor
+Atribui uma medida de importância aos nós com base em suas conexões diretas e na importância dessas conexões. Leva em consideração a centralidade dos vizinhos de um nó, atribuindo pontuações mais altas aos nós conectados a outros nós altamente centrais. Nós com alta centralidade de autovetor são influentes devido às suas conexões com outros nós influentes.
 
-Below are the top 10 nodes that exhibit a higher eigenvector centrality:
+Abaixo estão os 10 principais nós que exibem uma centralidade de autovetor mais alta:
 <center><img width="800" src="figures/eigenvector_centrality.png"></center>
 
-### K-core and K-shell
-The greatest k-core within this network was determined to be 393, signifying a highly connected group of nodes. This k-core represents a cohesive subset of pages that are intricately interconnected with each other.
+### K-core e K-shell
+O maior k-core nesta rede foi determinado como 393, significando um grupo de nós altamente conectado. Este k-core representa um subconjunto coeso de páginas que estão intrinsecamente interconectadas entre si.
 
-Furthermore, the greatest k-shell within this network was found to have a value of 294. A k-shell refers to a subset of nodes that possess a minimum degree within the network. In this case, the k-shell of 294 represents a significant group of nodes with a minimal number of connections to the rest of the network.
+Além disso, descobriu-se que o maior k-shell nesta rede tem um valor de 294. Um k-shell refere-se a um subconjunto de nós que possuem um grau mínimo dentro da rede. Neste caso, o k-shell de 294 representa um grupo significativo de nós com um número mínimo de conexões com o resto da rede.
 
-These discoveries shed light on the intricate structure and interdependencies within the network of Wikipedia pages stemming from the Gödel Incompleteness Theorems. The existence of such a robust k-core and k-shell underscores the interconnected nature of the topics and concepts associated with this prominent mathematical theorem.
-
+Essas descobertas lançam luz sobre a intrincada estrutura e interdependências dentro da rede de páginas da Wikipédia decorrentes dos Teoremas da Incompletude de Gödel. A existência de um k-core e k-shell robustos ressalta a natureza interconectada dos tópicos e conceitos associados a este proeminente teorema matemático.
 <center><img width="800" src="figures/k-core_sociopatterns.png"></center>
 
-## Probability Distributions 
-Firstly, focusing on the degree distribution, the probability density function (PDF) reveals that the majority of nodes exhibit degrees ranging from 0 to 50. This suggests that a significant portion of pages within the network have relatively low connectivity. However, intriguingly, there is a small curve in the PDF that emerges between the range of 400 and 600. This indicates the presence of a subset of nodes with notably high degrees, signifying a group of pages with a substantial number of connections. These nodes with high degrees play a crucial role in facilitating information flow and connecting disparate topics within the network.
+## Distribuições de probabilidade
+Primeiramente, focando na distribuição de graus, a função de densidade de probabilidade (PDF) revela que a maioria dos nós apresenta graus que variam de 0 a 50. Isso sugere que uma parcela significativa das páginas da rede possui conectividade relativamente baixa. No entanto, curiosamente, há uma pequena curva no PDF que surge entre o intervalo de 400 e 600. Isto indica a presença de um subconjunto de nós com graus notavelmente elevados, significando um grupo de páginas com um número substancial de conexões. Esses nós com altos graus desempenham um papel crucial na facilitação do fluxo de informações e na conexão de tópicos díspares dentro da rede.
 
-Similarly, when examining the PDF of eigenvector centrality, a similar trend emerges. The majority of nodes are distributed around low values of eigenvector centrality, indicating that most pages have limited influence or prominence within the network. However, there are notable exceptions, as evidenced by the presence of nodes with high eigenvector centrality values. These nodes hold significant importance in terms of their influence and centrality within the network, likely representing key topics or foundational concepts that have a widespread impact on other pages.
+Da mesma forma, ao examinar a PDF da centralidade do autovetor, surge uma tendência semelhante. A maioria dos nós está distribuída em torno de valores baixos de centralidade de autovetor, indicando que a maioria das páginas tem influência ou proeminência limitada dentro da rede. No entanto, existem exceções notáveis, como evidenciado pela presença de nós com altos valores de centralidade de autovetores. Esses nós têm uma importância significativa em termos de influência e centralidade na rede, provavelmente representando tópicos-chave ou conceitos fundamentais que têm um impacto generalizado em outras páginas.
 
-In summary, the probability distributions of the degree and eigenvector centrality within the network of Wikipedia pages starting from the Gödel Incompleteness Theorems demonstrate a pattern of most nodes having low values, while a subset of nodes exhibit high degrees and eigenvector centrality. These distributions highlight the varying levels of connectivity and influence within the network, emphasizing the significance of certain nodes in shaping the overall structure and flow of information within this domain.
+Em resumo, as distribuições de probabilidade do grau e da centralidade do autovetor dentro da rede de páginas da Wikipedia a partir dos Teoremas da Incompletude de Gödel demonstram um padrão de maioria dos nós com valores baixos, enquanto um subconjunto de nós exibe altos graus e centralidade do autovetor. Estas distribuições destacam os vários níveis de conectividade e influência dentro da rede, enfatizando a importância de certos nós na formação da estrutura geral e do fluxo de informações dentro deste domínio.
 
 <center><img width="800" src="figures/degree_and_centrality_plots.png"></center>
 
-## Pair Plot with network metrics
-Upon examining the pair plot of network metrics within the directed network of Wikipedia pages, starting from the Gödel Incompleteness Theorems, some intriguing patterns have emerged. While the pair plot may not provide comprehensive insights into the network's overall structure, it does reveal notable correlations between certain metrics and suggests the presence of distinct clusters within the data.
+## Emparelhar gráfico com métricas de rede
+Ao examinar o gráfico de pares de métricas de rede dentro da rede direcionada de páginas da Wikipédia, começando pelos Teoremas da Incompletude de Gödel, surgiram alguns padrões intrigantes. Embora o gráfico de pares possa não fornecer insights abrangentes sobre a estrutura geral da rede, ele revela correlações notáveis ​​entre certas métricas e sugere a presença de clusters distintos nos dados.
 
-Firstly, the pair plot indicates a correlation between betweenness and degree. This correlation implies that nodes with higher degrees tend to have a greater influence in terms of information flow within the network. Nodes with higher degrees often act as crucial bridges, connecting disparate topics and facilitating the transfer of knowledge across different areas.
+Em primeiro lugar, o gráfico de pares indica uma correlação entre intermediação e grau. Esta correlação implica que nós com graus mais elevados tendem a ter maior influência em termos de fluxo de informação dentro da rede. Os nós com graus mais elevados atuam frequentemente como pontes cruciais, ligando tópicos díspares e facilitando a transferência de conhecimento entre diferentes áreas.
 
-Similarly, the pair plot reveals a correlation between eigenvector centrality and closeness. This correlation suggests that nodes with higher eigenvector centrality tend to have a closer proximity to other nodes within the network. This proximity allows these nodes to have more efficient and direct access to information, enhancing their overall centrality and influence within the network.
+Da mesma forma, o gráfico de pares revela uma correlação entre centralidade e proximidade do autovetor. Esta correlação sugere que nós com maior centralidade de autovetores tendem a ter uma proximidade maior com outros nós dentro da rede. Esta proximidade permite que estes nós tenham um acesso mais eficiente e direto à informação, aumentando a sua centralidade e influência global na rede.
 
-Moreover, the eigenvector column in the pair plot demonstrates the presence of two distinct clusters. The first cluster represents more popular nodes, characterized by higher eigenvector centrality values. These popular nodes likely correspond to topics or concepts that have garnered significant attention and prominence within the network. Conversely, the second cluster represents a larger group of nodes that are relatively less popular, with lower eigenvector centrality values. These nodes may correspond to less widely known or niche topics within the network.
+Além disso, a coluna do autovetor no gráfico de pares demonstra a presença de dois clusters distintos. O primeiro cluster representa nós mais populares, caracterizados por valores mais elevados de centralidade de autovetores. Esses nós populares provavelmente correspondem a tópicos ou conceitos que atraíram atenção e destaque significativos na rede. Por outro lado, o segundo cluster representa um grupo maior de nós que são relativamente menos populares, com valores de centralidade de autovetores mais baixos. Esses nós podem corresponder a tópicos menos conhecidos ou de nicho dentro da rede.
 
 <center><img width="800" src="figures/all.png"></center>
 
 ## Gephi Plots
 
-### Visualization 
-- [:chart: Github page with interactive network](https://andre-meneses.github.io/networkdeploy/network/)
+### Visualização 
 
-Using the Gephi software, an improved visualization of the complete network was generated, leading to a visually captivating plot. The nodes were assigned colors corresponding to their respective communities, which were determined using modularity with a resolution of 1.0. The network consists of 9 distinct communities, distributed as follows:
+Utilizando o software Gephi, foi gerada uma visualização aprimorada de toda a rede, resultando em um enredo visualmente cativante. Aos nós foram atribuídas cores correspondentes às suas respectivas comunidades, que foram determinadas utilizando modularidade com resolução de 1,0. A rede é composta por 9 comunidades distintas, distribuídas da seguinte forma:
 
-1. Pink: Constituting 24.55% of the nodes
-2. Green: Comprising 22.25% of the nodes
-3. Blue: Accounting for 17.46% of the nodes
-4. Other communities: Representing 35.74% of the nodes
+1. Rosa: Constituindo 24,55% dos nós
+2. Verde: Compreende 22,25% dos nós
+3. Azul: Representando 17,46% dos nós
+4. Outras comunidades: Representando 35,74% dos nós
 
-Nodes with an in-degree exceeding 250 are identified by displaying their names, while the size of each node is scaled proportionally to its in-degree.  
+Nós com um grau de entrada superior a 250 são identificados exibindo seus nomes, enquanto o tamanho de cada nó é dimensionado proporcionalmente ao seu grau de entrada.
 
 <center><img width="800" src="figures/gephi_graph.svg"></center>
 
 ---- 
 
-### Filtered Graphs
+### Gráficos filtrados
 
-By examining the plot, it becomes apparent that there is a noticeable cluster of pink nodes with a high degree of connectivity. Conversely, the edges of the graph display numerous nodes with lower degrees. By filtering the graph taking into account the in-degree, only a percentege of nodes and edges are displayed:
+Ao examinar o gráfico, torna-se aparente que há um aglomerado notável de nós rosa com um alto grau de conectividade. Por outro lado, as bordas do gráfico exibem vários nós com graus mais baixos. Ao filtrar o gráfico levando em consideração o grau de entrada, apenas uma porcentagem de nós e arestas é exibida:
 
 <div align="center">
 
@@ -120,12 +110,10 @@ By examining the plot, it becomes apparent that there is a noticeable cluster of
 
 ### K-core
 
-It is possible to use gephi to plot the 343-core as well:
+ambém é possível usar o gephi para plotar o núcleo 343:
 
 <center><img width="800" src="figures/gephi_graph_core.svg"></center>
 
-## Gephisto Visualization
-By using the [enhanced.graphml](./graphml/enhanced.graphml) file, we used [gephisto](https://jacomyma.github.io/gephisto/) to generate another visualization of the graph. We can now see different nodes displayed and a different color scheme, which gives a different perspective on the network .
 
 <center><img width="800" src="figures/gephisto.png"></center>
 
